@@ -39,7 +39,41 @@ var StringManipulations = /** @class */ (function () {
     };
     return StringManipulations;
 }());
+var NumbersManipulations = /** @class */ (function () {
+    function NumbersManipulations() {
+    }
+    NumbersManipulations.prototype.findPrime = function (num) {
+        var flag = false;
+        for (var i = 2; i <= num / 2; ++i) {
+            if (num % i == 0) {
+                flag = true;
+                break;
+            }
+        }
+        if (!flag)
+            console.log(num + " is a prime number.");
+        else
+            console.log(num + " is not a prime number.");
+    };
+    NumbersManipulations.prototype.findMagic = function (num) {
+        var sum = 0;
+        while (num != 0) {
+            sum += num % 10;
+            num = Math.floor(num / 10);
+        }
+        if (sum == 1) {
+            console.log("Is Magic Number");
+        }
+        else {
+            console.log("Not a Magic Number");
+        }
+    };
+    return NumbersManipulations;
+}());
 var stringObject = new StringManipulations();
 stringObject.print("FaceprePrograds");
 stringObject.printWithSpace("FACEPREP");
 stringObject.findVowel("FACEPREP");
+var numObject = new NumbersManipulations();
+numObject.findPrime(11);
+numObject.findMagic(226);

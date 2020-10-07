@@ -42,10 +42,38 @@ class StringManipulations implements StringManipulationService {
   }
 }
 
+class NumbersManipulations {
+  findPrime(num: number): void {
+    var flag = false;
+    for (var i = 2; i <= num / 2; ++i) {
+      if (num % i == 0) {
+        flag = true;
+        break;
+      }
+    }
+    if (!flag) console.log(num + " is a prime number.");
+    else console.log(num + " is not a prime number.");
+  }
+  findMagic(num: number): void {
+    let sum = 0;
+
+    while (num != 0) {
+      sum += num % 10;
+      num = Math.floor(num / 10);
+    }
+    if (sum == 1) {
+      console.log("Magic Number");
+    } else {
+      console.log("Not a Magic Number");
+    }
+  }
+}
+
 var stringObject = new StringManipulations();
-
 stringObject.print("FaceprePrograds");
-
 stringObject.printWithSpace("FACEPREP");
-
 stringObject.findVowel("FACEPREP");
+
+var numObject = new NumbersManipulations();
+numObject.findPrime(11);
+numObject.findMagic(226);
