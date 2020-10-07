@@ -62,7 +62,7 @@ var NumbersManipulations = /** @class */ (function () {
             num = Math.floor(num / 10);
         }
         if (sum == 1) {
-            console.log("Is Magic Number");
+            console.log("Magic Number");
         }
         else {
             console.log("Not a Magic Number");
