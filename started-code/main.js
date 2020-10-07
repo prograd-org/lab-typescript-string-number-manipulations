@@ -2,7 +2,8 @@
 exports.__esModule = true;
 //created a class to implement the interface methods
 var StringManipulations = /** @class */ (function () {
-    function StringManipulations() {}
+    function StringManipulations() {
+    }
     //print the varios operations on string
     StringManipulations.prototype.print = function (word) {
         console.log(word);
@@ -13,11 +14,6 @@ var StringManipulations = /** @class */ (function () {
         console.log(word + " Another string");
         console.log(word.slice(0, word.length - 3));
         console.log(word.length);
-        //no sir that is not my github acc
-        //whare did clone the project
-        //here sir
-        //what you want sir??
-        //
     };
     //print the every char with space
     StringManipulations.prototype.printWithSpace = function (sentence) {
@@ -44,7 +40,8 @@ var StringManipulations = /** @class */ (function () {
     return StringManipulations;
 }());
 var NumbersManipulations = /** @class */ (function () {
-    function NumbersManipulations() {}
+    function NumbersManipulations() {
+    }
     NumbersManipulations.prototype.findPrime = function (num) {
         var flag = false;
         for (var i = 2; i <= num / 2; ++i) {
@@ -66,7 +63,8 @@ var NumbersManipulations = /** @class */ (function () {
         }
         if (sum == 1) {
             console.log("Magic Number");
-        } else {
+        }
+        else {
             console.log("Not a Magic Number");
         }
     };
