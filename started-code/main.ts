@@ -14,7 +14,7 @@ class StringManipulations implements StringManipulationService {
     console.log(word.slice(0, word.length - 3));
     console.log(word.length);
   }
-  var something="something";
+
   //print the every char with space
   printWithSpace(sentence: string): void {
     var spaceString = "";
@@ -22,6 +22,7 @@ class StringManipulations implements StringManipulationService {
       spaceString += sentence[i] + " ";
     }
     console.log(spaceString);
+    //something
   }
 
   //print the no of vowels
